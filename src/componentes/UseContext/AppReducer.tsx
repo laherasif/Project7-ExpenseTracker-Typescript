@@ -10,9 +10,10 @@ export default function todosReducer(
       debugger;
       console.log("payload" , action.payload.id)
       const deletedTodo = state.Expense.filter(item =>{
-        if(item.id !== action.payload.id)
-          return item
-       })
+       return  item.id !== action.payload.id
+         
+      }
+       )
         
       return {
         ...state,
@@ -24,8 +25,8 @@ export default function todosReducer(
       debugger;
       console.log("payload" , action.payload.id)
       const deletedTodo = state.Income.filter(item =>{
-        if(item.id !== action.payload.id)
-          return item
+        return  item.id !== action.payload.id
+        
        })
         
       return {
